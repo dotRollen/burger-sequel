@@ -18,3 +18,7 @@ Run `npm start` to star the server!
 * Sequelize - [Documentation](https://www.npmjs.com/package/sequelize)
 
 ## Screenshots
+
+![burgerfront](https://user-images.githubusercontent.com/17300742/44998653-48b2f900-af85-11e8-867f-166251a19575.png)
+
+![burger](https://user-images.githubusercontent.com/17300742/44966750-02b94f00-af0b-11e8-8701-6599b46cf3d2.png)
