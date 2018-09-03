@@ -1,0 +1,56 @@
+<div class="mdl-cell mdl-cell--12-col">
+    <center><h3>{{customer.customer_name}}</h3></center>
+</div>
+<div class="mdl-cell mdl-cell--6-col">
+  <div class="burger-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <i class="fas fa-utensils"></i>&nbsp;Ready to Eat!
+    </div>
+    <div class="mdl-card__supporting-text">
+        <ul class="burger-list-item mdl-list">
+            {{#each burgers}}
+                {{#unless this.dataValues.devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="mdl-cell mdl-cell--6-col">
+    <div class="burger-card-wide mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title">
+        <i class="far fa-clipboard"></i>&nbsp;Order again
+      </div>
+      <div class="mdl-card__supporting-text">
+        <ul class="burger-list-item mdl-list">
+            {{#each burgers}}
+                {{#if this.dataValues.devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+      </div>
+    </div>
+</div>
+
+<div class="mdl-cell mdl-cell--12-col">
+    <h4><i class="fas fa-edit"></i>&nbsp;Order a new burger</h4>
+    Welcome {{customer.customer_name}}, what would you like to eat?
+    <form class="create-form">
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="burger-name">Burger Name</label>
+        <input class="mdl-textfield__input" type="text" id="burger-name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="devoured">Eat when ready?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Yes!<br>
+        <input type="radio" name="devoured" value="0"> No, I want to take my time.
+    </div>
+    <br>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+        data-id="{{customer.id}}" type="submit" id="submit-burger">Add Burger</button>
+    <br>
+    </form>
+</div>

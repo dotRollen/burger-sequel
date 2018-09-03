@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Burger Order Up!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+<body>
+  <div class="burger-layout mdl-layout mdl-layout--fixed-header mdl-js-layout burger-background">
+    <div class="burger-ribbon"></div>
+    <main class="burger-main mdl-layout__content">
+      <div class="burger-container mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="burger-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col">
+           <center><h1><img src="/assets/img/burger-logo.png" width="100" alt=""> Burger Order Up!</h1></center>
+          </div>
+          {{{ body }}}
+        </div>
+      </div>
+    </main>
+  </div>
+  <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="/assets/js/customers.js"></script>
+  <script src="/assets/js/burgers.js"></script>
+</body>
+</html>

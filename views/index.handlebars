@@ -1,0 +1,28 @@
+<div class="mdl-cell mdl-cell--6-col">
+  <div class="burger-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+        <i class="fas fa-utensils"></i>&nbsp;Customers
+    </div>
+    <div class="mdl-card__supporting-text">
+        <ul class="burger-list-item mdl-list">
+            {{#each customers}}
+                {{> customers/customer-block}}
+            {{/each}}
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div class="mdl-cell mdl-cell--12-col">
+    <h4><i class="fas fa-edit"></i>&nbsp;Seat a new customer</h4>
+    Welcome to burger order up, please have a seat!
+    <form class="create-form-customer">
+    <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="customer-name">Customer Name</label>
+        <input class="mdl-textfield__input" type="text" id="customer-name" name="name">
+    </div>
+    <br>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">Sit Customer</button>
+    <br>
+    </form>
+</div>

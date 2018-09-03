@@ -1,0 +1,18 @@
+<li class="burger-list-wide mdl-list__item">
+    <span class="mdl-list__item-primary-content">
+    {{this.dataValues.burger_name}}
+    </span>
+    <button type="button" class="mdl-chip mdl-chip--contact change-devoured" data-id="{{this.dataValues.id}}" data-newdevoured="{{devoured}}">
+        {{#if devoured}}
+        <span class="mdl-chip__contact mdl-color--green mdl-color-text--white">E</span>
+        <span class="mdl-chip__text">Eat</span>
+        {{else}}
+        <span class="mdl-chip__contact mdl-color--blue mdl-color-text--white">+</span>
+        <span class="mdl-chip__text">Re-order!</span>
+        {{/if}}
+    </button>
+    <button type="button" class="mdl-chip mdl-chip--contact delete-burger" data-id="{{this.dataValues.id}}">
+        <span class="mdl-chip__contact mdl-color--red mdl-color-text--white">x</span>
+        <span class="mdl-chip__text">Throw-out</span>
+    </button>
+</li>
